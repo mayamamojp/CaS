@@ -1,0 +1,43 @@
+{
+  "name": "cas_client",
+  "version": "2.4.1901",
+  "description": "CaSClient For CTI",
+  "main": "main.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron ."
+  },
+  "author": "NEW",
+  "license": "MIT",
+  "devDependencies": {
+    "devtron": "^1.4.0",
+    "electron": "^8.3.0",
+    "electron-builder": "^21.2.0",
+    "electron-rebuild": "^1.8.2"
+  },
+  "dependencies": {
+    "child-process": "^1.0.2",
+    "electron-log": "^3.0.9",
+    "electron-updater": "^4.2.0",
+    "jquery": "^3.4.1",
+    "rimraf": "^3.0.0",
+    "uuid": "^8.3.2"
+  },
+  "build": {
+    "productName": "デスクトップクライアント",
+    "appId": "com.cas-foods.client",
+    "nsis": {
+      "include": "nsh/cti_shortcut.nsh"
+    },
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "./*",
+      "dist/electron/**/*",
+      "build/icons/*"
+    ],
+    "extraResources": [
+      "cti/*"
+    ]
+  }
+}
